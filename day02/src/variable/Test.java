@@ -1,5 +1,5 @@
 package variable;
 
-publisc class Test {
+public class Test {
   
 }
