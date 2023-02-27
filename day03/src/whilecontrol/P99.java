@@ -3,8 +3,8 @@ package whilecontrol;
 public class P99 {
 
    public static void main(String[] args) {
-      
-	  int aa = 100;
+      int aa = 100;
+      int bb = 100;
 	  
 	  int b = 20;
 	  
