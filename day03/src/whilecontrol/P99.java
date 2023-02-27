@@ -14,6 +14,6 @@ public class P99 {
 				}
 			}
 			System.out.println("");
-	    }
+		}
 	}
 }
