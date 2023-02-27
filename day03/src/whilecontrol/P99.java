@@ -7,6 +7,7 @@ public class P99 {
       int bb = 100;
 	  
 	  int b = 20;
+	  int c = 10;
 	  
 	  
       for(int i=2;i<10;i++) {
