@@ -17,14 +17,18 @@ public class App {
 		
 		for (Account a:acc) {
 			System.out.println(a);
-			System.out.println("잔액은 " + a.getBalance() + "원입니다.");
-			System.out.printf("현재 이자금액은 %4.2f원입니다. \n\n", a.getInterest());
+		}
+		System.out.println("");
+		
+		for (Account a:acc) {
+			System.out.printf("%s님의 잔액은 %4.2f원이고, 현재 이자금액은 %4.2f입니다. \n", a.getAccName(), a.getBalance(), a.getInterest());
 			if(a.getGrade().equals("VIP")) {
 				sum += a.getBalance();
 				cnt++;
 			}
 		}
 		avg = sum / cnt;
+		System.out.println("");
 		System.out.printf("VIP 등급의 잔액의 합은 %4.2f원이고, 잔액의 평균은 %4.2f원입니다.", sum, avg);
 
 	}

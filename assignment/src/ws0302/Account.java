@@ -27,10 +27,13 @@ public class Account {
 		this.grade = grade;
 	}
 
+	public String getAccName() {
+		return accName;
+	}
+
 	public double getBalance() {
 		return balance;
 	}
-	
 
 	public String getGrade() {
 		return grade;
