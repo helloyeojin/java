@@ -74,5 +74,6 @@ public class Account {
 		if (this.balance < money) {
 			throw new BalanceInsufficientException("I02_잔고 부족: " + (money-balance) + "원이 부족합니다.");
 		}
+		this.balance -= money;
 	}
 }
