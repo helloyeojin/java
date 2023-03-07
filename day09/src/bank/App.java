@@ -20,8 +20,6 @@ public class App {
 			//계좌 개설 	
 			} else if(cmd.equals("c")) {
 				System.out.println("Create Account: ");
-				System.out.println("Input Account Number: ");
-				String accNo = sc.next();
 				System.out.println("Input Product Type: ");
 				String name = sc.next();
 				System.out.println("Input Your Name: ");
@@ -30,7 +28,7 @@ public class App {
 				double balance = Double.parseDouble(sc.next());
 				
 				try {
-					acc = new Account(accNo, name, accHolder, balance);
+					acc = new Account(name, accHolder, balance);
 					System.out.println(acc);
 				} catch (MinusException e) {
 					// TODO Auto-generated catch block
