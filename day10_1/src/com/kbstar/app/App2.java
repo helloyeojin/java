@@ -57,7 +57,7 @@ public class App2 {
 				ItemDTO item = new ItemDTO(id, name, price, qt);
 				try {
 					itemDao.update(item);
-					System.out.println(item+" 상품이 업데이트되었습니다.");
+					System.out.println(item+" 상품이 업데이트 되었습니다.");
 					
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
@@ -75,6 +75,7 @@ public class App2 {
 			} else if(cmd.equals("sa")) {
 				List<ItemDTO> list = null;
 				try {
+					System.out.println("전체 상품 리스트: ");
 					list = itemDao.select();   // list의 모든 사용자 정보가 담겨져서 날라온다...
 					for(ItemDTO i:list) {
 						System.out.println(i);
