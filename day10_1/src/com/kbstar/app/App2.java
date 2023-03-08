@@ -75,10 +75,15 @@ public class App2 {
 			} else if(cmd.equals("sa")) {
 				List<ItemDTO> list = null;
 				try {
-					System.out.println("전체 상품 리스트: ");
 					list = itemDao.select();   // list의 모든 사용자 정보가 담겨져서 날라온다...
-					for(ItemDTO i:list) {
-						System.out.println(i);
+					if(list.size() == 0) {
+						System.out.println("상품이 존재하지 않습니다.");
+					}
+					else if(list.size() != 0) {
+						System.out.println("전체 상품 리스트: ");
+						for(ItemDTO i:list) {
+							System.out.println(i);
+						}
 					}
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
