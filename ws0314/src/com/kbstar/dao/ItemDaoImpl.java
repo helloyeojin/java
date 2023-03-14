@@ -84,7 +84,7 @@ public class ItemDaoImpl implements DAO<String, String, Item> {
 				double rate = rset.getDouble("rate");
 				Date regdate = rset.getDate("regdate");
 				item = new Item(id, name, price, rate, regdate);
-//				list.add(item);}
+//				list.add(item);
 			} catch (Exception e) {
 				throw e;
 				// e.printStackTrace();
