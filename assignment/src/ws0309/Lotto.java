@@ -12,30 +12,13 @@ public class Lotto {
 		this.prizeMoney = MakeWinningNumberMoney.makeWinningMoney();
 //		System.out.println(prizeMoney);
 	}
-	
-	public Lotto(HashSet<Integer> winningNum, double prizeMoney) {
-		this();
-	}
 
 	public HashSet<Integer> getWinningNum() {
 		return winningNum;
 	}
 
-	public void setWinningNum(HashSet<Integer> winningNum) {
-		this.winningNum = winningNum;
-	}
-
 	public double getPrizeMoney() {
 		return prizeMoney;
-	}
-
-	public void setPrizeMoney(double prizeMoney) {
-		this.prizeMoney = prizeMoney;
-	}
-
-	@Override
-	public String toString() {
-		return "Lotto [winningNum=" + winningNum + ", prizeMoney=" + prizeMoney + "]";
 	}
 	
 	public int checkRanking(ArrayList<Integer> myNum) {
@@ -62,22 +45,10 @@ public class Lotto {
 		double result = 0.0;
 		
 		switch(rank) {
-			case 1: {
-				result = prizeMoney * 0.5;
-				break;
-			}
-			case 2: {
-				result = prizeMoney * 0.3;
-				break;
-			}
-			case 3: {
-				result = prizeMoney * 0.2;
-				break;
-			}
-			default: {
-				result = 0.0;
-				break;
-			}
+			case 1: result = prizeMoney * 0.5; break;
+			case 2: result = prizeMoney * 0.3; break;
+			case 3: result = prizeMoney * 0.2; break;
+			default: result = 0.0; break;
 		}
 		return result;
 		
