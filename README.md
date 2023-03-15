@@ -35,6 +35,6 @@ __double underscores__
 </pre>
 
 
-[구글에 접속할 수 있습니다.](https://google.com, "google link")
+[구글에 접속할 수 있습니다.](https://www.google.com, "google link")
 
 
