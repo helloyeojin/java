@@ -21,7 +21,7 @@ public class CartDaoImpl implements DAO<String, String, Cart> {
 			e.printStackTrace();
 			return;
 		}
-		System.out.println("Driver Loading 성공.");
+//		System.out.println("Driver Loading 성공.");
 	}
 
 	@Override
@@ -116,7 +116,26 @@ public class CartDaoImpl implements DAO<String, String, Cart> {
 
 	@Override
 	public List<Cart> search(String k) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		List<Cart> list = new ArrayList<>();
+		try(Connection con = getConnection(); PreparedStatement pstmt = con.prepareStatement(Sql.myCartSelectAllSql)) {
+			pstmt.setString(1, k);
+			try(ResultSet rset = pstmt.executeQuery();) {
+				while(rset.next()) {
+					Cart cart = null;
+					String id = rset.getString("id");
+					String userId = rset.getString("user_Id");
+					String itemId = rset.getString("item_Id");
+					int cnt = rset.getInt("cnt");
+					Date regdate = rset.getDate("regdate");
+					cart = new Cart(id, userId, itemId, cnt, regdate);
+					list.add(cart);
+				}
+			} catch(Exception e) {
+				throw e;
+			}
+		} catch(Exception e) {
+			throw e;
+		}
+		return list;
 	}
 }
