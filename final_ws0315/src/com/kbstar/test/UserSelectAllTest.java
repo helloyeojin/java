@@ -2,21 +2,21 @@ package com.kbstar.test;
 
 import java.util.List;
 
-import com.kbstar.dto.Cust;
+import com.kbstar.dto.UserDTO;
 import com.kbstar.frame.CRUDService;
-import com.kbstar.service.CustCRUDServiceImpl;
+import com.kbstar.service.UserCRUDServiceImpl;
 
-public class CustSelectAllTest {
+public class UserSelectAllTest {
 
 	public static void main(String[] args) {
-		CRUDService<String, Cust> crudService = new CustCRUDServiceImpl();
-		List<Cust> list = null;
+		CRUDService<String, UserDTO> crudService = new UserCRUDServiceImpl();
+		List<UserDTO> list = null;
 		try {
-			list = crudService.get();
+			list = crudService.getAll();
 			if (list.size() == 0) {
 				System.out.println("데이터가 없습니다.");
 			} else {
-				for (Cust obj : list) {
+				for (UserDTO obj : list) {
 					System.out.println(obj);
 				}
 			}
